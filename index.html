@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-Ticket</title>
+    <!-- tailwind and daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="mx-2 lg:mx-24">
+    <header>
+        <!-- nav section -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <details>
+                                <summary>Parent</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn flex items-center bg-[#1dd1001a] text-[#1dd100fc]">Bus
+                        <img src="images/bus-icon.png" alt="">
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <section>
+            <!-- component -->
+            <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+            <link rel="stylesheet"
+                href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+
+            <section class="relative  bg-blueGray-50">
+                <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+                    <div class="absolute top-0 w-full h-full bg-center bg-cover rounded-[32px]" style="
+            background-image: url('images/banner.png');">
+                        <span id="blackOverlay" class="w-full h-full absolute opacity-0 bg-black"></span>
+                    </div>
+                    <div class="container relative mx-auto">
+                        <div class="items-center flex flex-wrap">
+                            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                                <div class="pr-12">
+                                    <h1 class="text-white font-semibold text-5xl">
+                                        End-to-End Travel with <br><span class="text-[#1dd100fc]">P Paribahan</span>
+                                    </h1>
+                                    <p class="mt-4 text-lg text-blueGray-200">
+                                        This is a simple example of a Landing Page you can build using
+                                        Notus JS. It features multiple CSS components based on the
+                                        Tailwind CSS design system.
+                                    </p>
+                                    <button class="btn bg-[#1dd100fc] text-black border-none mt-4 w-32">Buy Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- badge container -->
+                <div>
+                    <!-- first badge -->
+                    <div class="flex justify-between">
+                        <img src="images/people.png" alt="">
+                        <div>
+                            <h1>500K+</h1>
+                            <p>Registered users</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
