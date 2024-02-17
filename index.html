@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P-Ticket</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- tailwind and daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="mx-2 lg:mx-24">
-    <header>
+<body>
+    <header class="mx-2 lg:mx-24">
         <!-- nav section -->
-        <nav>
+        <nav class="font-raleway mb-2 lg:mb-20 mt-2 lg:mt-10">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -26,36 +27,25 @@
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">P-Ticket</a>
+                    <a class="btn btn-ghost sm:text-xl lg:text-4xl font-extrabold text-[#030712fc]">P-Ticket</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li class="text-[#030712b3] text-lg font-medium"><a>Home</a></li>
+                        <li class="text-[#030712b3] text-lg font-medium"><a>About</a></li>
+                        <li class="text-[#030712b3] text-lg font-medium"><a>Destination</a></li>
+                        <li class="text-[#030712b3] text-lg font-medium"><a>Search</a></li>
+
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn flex items-center bg-[#1dd1001a] text-[#1dd100fc]">Bus
+                    <a class="btn flex items-center bg-[#1dd1001a] text-[#1dd100fc] font-bold text-xl lg:px-7">Bus
                         <img src="images/bus-icon.png" alt="">
                     </a>
 
@@ -65,53 +55,120 @@
         <!-- banner section -->
         <section>
             <!-- component -->
-            <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
-            <link rel="stylesheet"
-                href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
-
-
             <section class="relative  bg-blueGray-50">
                 <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
-                    <div class="absolute top-0 w-full h-full bg-center bg-cover rounded-[32px]" style="
+                    <div class="absolute w-full h-full bg-center bg-cover rounded-[32px]" style="
             background-image: url('images/banner.png');">
-                        <span id="blackOverlay" class="w-full h-full absolute opacity-0 bg-black"></span>
+                        <span id="blackOverlay" class="w-full h-full absolute"></span>
                     </div>
                     <div class="container relative mx-auto">
                         <div class="items-center flex flex-wrap">
                             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                                 <div class="pr-12">
-                                    <h1 class="text-white font-semibold text-5xl">
+                                    <h1 class="text-white font-semibold text-3xl lg:text-5xl text-center">
                                         End-to-End Travel with <br><span class="text-[#1dd100fc]">P Paribahan</span>
                                     </h1>
-                                    <p class="mt-4 text-lg text-blueGray-200">
+                                    <p class="mt-4 text-lg text-white font-inter">
                                         This is a simple example of a Landing Page you can build using
                                         Notus JS. It features multiple CSS components based on the
                                         Tailwind CSS design system.
                                     </p>
-                                    <button class="btn bg-[#1dd100fc] text-black border-none mt-4 w-32">Buy Tickets</button>
+                                    <button class="btn bg-[#1dd100fc] text-black border-none mt-4 w-32">Buy
+                                        Tickets</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- badge container -->
-                <div>
+                <div class="absolute ml-36 -mt-24 font-inter flex justify-center gap-20">
                     <!-- first badge -->
-                    <div class="flex justify-between">
+                    <div
+                        class="flex justify-between items-center gap-3 border-b-4 border-solid border-[#1dd100fc] rounded-3xl bg-white shadow-md pl-8 pr-14 py-10">
                         <img src="images/people.png" alt="">
                         <div>
-                            <h1>500K+</h1>
-                            <p>Registered users</p>
+                            <h1 class="text-4xl font-bold">500K+</h1>
+                            <p class="text-lg">Registered users</p>
+                        </div>
+                    </div>
+                    <!-- second badge -->
+                    <div
+                        class="flex justify-between items-center gap-3 border-b-4 border-solid border-[#1dd100fc] rounded-3xl bg-white shadow-md pl-8 pr-14 py-10">
+                        <img src="images/ticket-cupon.png" alt="">
+                        <div>
+                            <h1 class="text-4xl font-bold">1.7 lacks</h1>
+                            <p class="text-lg">Tickets sold</p>
+                        </div>
+                    </div>
+                    <!-- third badge -->
+                    <div
+                        class="flex justify-between items-center gap-3 border-b-4 border-solid border-[#1dd100fc] rounded-3xl bg-white shadow-md pl-8 pr-14 py-10">
+                        <img src="images/stoppage.png" alt="">
+                        <div>
+                            <h1 class="text-4xl font-bold">80K+</h1>
+                            <p class="text-lg">Rental partners</p>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
     </header>
-    <main>
-
+    <main class="mx-2 lg:mx-24">
+        <!-- best offer section -->
+        <section class="mt-52 mb-12">
+            <h1 class="font-raleway text-4xl font-bold text-center mb-12">Best offers for you</h1>
+            <!-- coupon conainer -->
+            <div class="flex justify-center gap-6">
+                <!-- first coupon -->
+                <div class="flex flex-1 bg-[#FFBF0F] rounded-3xl">
+                    <div class="font-inter space-y-3 py-10 pl-12 pr-14">
+                        <h1 class="font-black text-4xl">15% OFF</h1>
+                        <h4 class="text-xl font-semibold">on your next purchase</h4>
+                        <p class="font-medium text-lg">use by January 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="font-raleway space-y-3 py-16 pl-10 pr-14">
+                        <h2 class="text-3xl font-bold">NEW15</h2>
+                        <p class="font-medium text-xl">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- second coupon -->
+                <div class="flex flex-1 bg-[#F78C9C] rounded-3xl">
+                    <div class="font-inter space-y-3 py-10 pl-12 pr-14">
+                        <h1 class="font-black text-4xl">20% OFF</h1>
+                        <h4 class="text-xl font-semibold">on your next purchase</h4>
+                        <p class="font-medium text-lg">use by January 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="font-raleway space-y-3 py-16 pl-10 pr-14">
+                        <h2 class="text-3xl font-bold">Couple 20</h2>
+                        <p class="font-medium text-xl">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-12">
+                <button class="btn border-2 bg-white border-solid border-[#1dd100fc] text-[#1dd100fc] px-8">See All Offers</button>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer class="bg-[#030712] py-32 px-28">
+        <div class="flex justify-between">
+            <div class="space-y-4">
+                <h2 class="font-raleway text-4xl font-extrabold text-white">P-Ticket</h2>
+                <p class="font-inter text-lg text-[#ffffffcc]">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+            </div>
+            <div class="space-y-4">
+                <h5 class="font-raleway text-xl font-semibold text-white">Download our app</h5>
+                <div class="flex gap-4 p-3 border-2 border-solid border-white rounded-xl">
+                    <img src="images/playstore.png" alt="">
+                    <div class="space-y-2">
+                        <img src="images/Vector.png" alt="">
+                        <img src="images/Vector (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
 
     </footer>
 </body>
