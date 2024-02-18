@@ -8,3 +8,10 @@
 .font-raleway{
     font-family: "Raleway", sans-serif;
 }
+
+.div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(3, 7, 18, 0.6);
+}
