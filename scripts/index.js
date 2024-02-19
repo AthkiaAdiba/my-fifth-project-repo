@@ -2,18 +2,20 @@ console.log('connected');
 
 let seatCount = 0;
 let totalPrice = 0;
-// let totalSeat = 40;
+
 
 const allSeats = document.getElementsByClassName('seat');
 for (const seat of allSeats) {
     seat.addEventListener('click', function () {
+        // seat.classList.add('disabledbutton');
+        // seat.setAttribute('disabled', true)
         document.getElementById('next').removeAttribute('disabled')
 
         if (seatCount < 4) {
             seatCount++;
         }
         else {
-            alert('No more');
+            alert('No More');
             return;
         }
         seat.classList.add('bg-[#1DD100]');
@@ -79,11 +81,19 @@ couponButton.addEventListener('click', function () {
         const discount = totalPrice * 0.15;
         document.getElementById('grand-total-price').innerText = totalPrice - discount;
         document.getElementById('input-and-button').classList.add('hidden');
-        // console.log(discount)
+        
+        document.getElementById('discount-price').innerText = discount;
+        document.getElementById('total-price-div').classList.remove('hidden');
+        
+        
     }
     else if(couponCode === 'COUPLE20'){
         const discount = totalPrice * 0.2;
         document.getElementById('grand-total-price').innerText = totalPrice - discount;
+        document.getElementById('input-and-button').classList.add('hidden');
+
+        document.getElementById('discount-price').innerText = discount;
+        document.getElementById('total-price-div').classList.remove('hidden');
     }
     else {
         alert('Invalid Coupon');
@@ -96,6 +106,11 @@ function modal() {
     document.getElementById('main-page').classList.add('hidden');
     document.getElementById('success').classList.remove('hidden');
 
+}
+
+function success(){
+    document.getElementById('success').classList.add('hidden');
+    document.getElementById('main-page').classList.remove('hidden');
 }
 
 
