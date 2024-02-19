@@ -14,6 +14,8 @@ for (const seat of allSeats) {
         
         document.getElementById('next').removeAttribute('disabled')
 
+        
+
         if (seatCount < 4) {
             seatCount++;
         }
@@ -77,8 +79,8 @@ const couponButton = document.getElementById('apply');
 
 couponButton.addEventListener('click', function () {
     const couponInputFieldValue = document.getElementById('coupon-input-field').value;
-    const couponCode = couponInputFieldValue.split(' ').join('').toUpperCase();
-    if (couponCode === 'NEW15') {
+    
+    if (couponInputFieldValue === 'NEW15') {
         const discount = totalPrice * 0.15;
         document.getElementById('grand-total-price').innerText = totalPrice - discount;
         document.getElementById('input-and-button').classList.add('hidden');
@@ -88,7 +90,7 @@ couponButton.addEventListener('click', function () {
         
         
     }
-    else if(couponCode === 'COUPLE20'){
+    else if(couponInputFieldValue === 'Couple 20'){
         const discount = totalPrice * 0.2;
         document.getElementById('grand-total-price').innerText = totalPrice - discount;
         document.getElementById('input-and-button').classList.add('hidden');
@@ -114,4 +116,4 @@ function success(){
     document.getElementById('main-page').classList.remove('hidden');
 }
 
-console.log(document.getElementById('number-input-field'))
+
