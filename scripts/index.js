@@ -7,8 +7,11 @@ let totalPrice = 0;
 const allSeats = document.getElementsByClassName('seat');
 for (const seat of allSeats) {
     seat.addEventListener('click', function () {
-        // seat.classList.add('disabledbutton');
-        // seat.setAttribute('disabled', true)
+        if(seat.classList.contains('bg-[#1DD100]')){
+            return;
+        }
+        
+        
         document.getElementById('next').removeAttribute('disabled')
 
         if (seatCount < 4) {
@@ -21,9 +24,7 @@ for (const seat of allSeats) {
         seat.classList.add('bg-[#1DD100]');
 
 
-        // seat.setAttribute('disabled', true);
-
-        // seatCount += 1;
+        
         const seatCountIncreased = document.getElementById('seat-count');
         seatCountIncreased.innerText = seatCount;
 
@@ -113,4 +114,4 @@ function success(){
     document.getElementById('main-page').classList.remove('hidden');
 }
 
-
+console.log(document.getElementById('number-input-field'))
